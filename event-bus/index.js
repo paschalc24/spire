@@ -8,7 +8,9 @@ app.use(express.json());
 
 const portMap = {
   "Departments_Service": 4000,
-  "Courses_Service": 4001
+  "Courses_Service": 4001,
+  "Carts_Service": 4002,
+  "Query_Service": 4003
 }
 
 app.post('/events', async (req, res) => {

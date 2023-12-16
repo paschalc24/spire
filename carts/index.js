@@ -91,6 +91,6 @@ app.post('/events', async (req, res) => {
 
 const emitPostCreatedEvent = async (res, id, title) => {};
 
-app.listen(4003, () => {
-  console.log(`(${process.pid}) Carts Service: Listening on 4003`);
+app.listen(4002, () => {
+  console.log(`(${process.pid}) Carts Service: Listening on 4002`);
 });

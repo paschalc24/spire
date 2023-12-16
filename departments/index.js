@@ -45,35 +45,26 @@ app.post('/departments', async (req, res) => {
   
   Store.write(departments);
 
-  // try {
-  //   await fetch('http://localhost:4005/events', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({
-  //       type: 'StudentCreated',
-  //       data: {
-  //         id,
-  //         firstName, 
-  //         lastName,
-  //         degrees,
-  //         gpa,
-  //         major_gpa,
-  //         academic_year,
-  //         advisor,
-  //         standing,
-  //         credits,
-  //         specializations,
-  //         expected_grad 
-  //       },
-  //     }),
-  //   });
-  // } catch (err) {
-  //   console.log(`(${process.pid}) departments Service: ${err}`);
-  //   res.status(500).send({
-  //     status: 'ERROR',
-  //     message: err,
-  //   });
-  // }
+  try {
+    await fetch('http://localhost:4005/events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'DepartmentCreated',
+        data: {
+          id,
+          title, 
+          track,
+        },
+      }),
+    });
+  } catch (err) {
+    console.log(`(${process.pid}) Departments Service: ${err}`);
+    res.status(500).send({
+      status: 'ERROR',
+      message: err,
+    });
+  }
 
   res.status(201).send(departments[id]);
   console.log(`(${process.pid}) Departments Service: ${JSON.stringify(departments)}`);

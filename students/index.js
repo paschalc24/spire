@@ -48,7 +48,6 @@ app.post('/students', async (req, res) => {
     id,
     firstName, 
     lastName,
-    departments,
     gpa,
     major_gpa,
     academic_year,
@@ -60,35 +59,34 @@ app.post('/students', async (req, res) => {
   };
   Store.write(students);
 
-  // try {
-  //   await fetch('http://localhost:4005/events', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({
-  //       type: 'StudentCreated',
-  //       data: {
-  //         id,
-  //         firstName, 
-  //         lastName,
-  //         departments,
-  //         gpa,
-  //         major_gpa,
-  //         academic_year,
-  //         advisor,
-  //         standing,
-  //         credits,
-  //         specializations,
-  //         expected_grad 
-  //       },
-  //     }),
-  //   });
-  // } catch (err) {
-  //   console.log(`(${process.pid}) Students Service: ${err}`);
-  //   res.status(500).send({
-  //     status: 'ERROR',
-  //     message: err,
-  //   });
-  // }
+  try {
+    await fetch('http://localhost:4005/events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'StudentCreated',
+        data: {
+          id,
+          firstName, 
+          lastName,
+          gpa,
+          major_gpa,
+          academic_year,
+          advisor,
+          standing,
+          credits,
+          expected_grad,
+          coursesTaken
+        },
+      }),
+    });
+  } catch (err) {
+    console.log(`(${process.pid}) Students Service: ${err}`);
+    res.status(500).send({
+      status: 'ERROR',
+      message: err,
+    });
+  }
 
   res.status(201).send(students[id]);
   console.log(`(${process.pid}) Students Service: ${JSON.stringify(students)}`);

@@ -7,55 +7,88 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/posts', (req, res) => {
-  const posts = Store.read();
-  res.send(posts);
+app.get('/students', (req, res) => {
+  const students = Store.read();
+  res.send(students);
 });
 
 app.post('/events', (req, res) => {
   const { type, data } = req.body;
-  const posts = Store.read();
-  if (type === 'PostCreated') {
-    const { id, title } = data;
-    console.log(`${process.pid} Query Service: PostCreated ${id}`)
-    posts[id] = { id, title, comments: []};
-  }
-  if (type === 'CommentVoted') {
-    const { commentId, postId, votes} = data;
-    console.log(`${process.pid} Query Service: CommentVoted postId: ${postId} commentId: ${commentId}`)
-    posts[postId]['comments'][0]['votes'] = votes;
-  }
-
-  if (type === 'CommentCreated') {
-    const { id, content, postId } = data;
-    console.log(`${process.pid} Query Service: CommentCreated ${id}`)
-    console.log(`post id = ${postId}`);
-    const post = posts[postId];
-    console.log(post);
-    post.comments.push({ id, content, "status": "under_review", votes: 0});
-  }
-  
-  if (type === 'CommentModerated') {
-    const { id, content, postId, status } = data;
-    console.log(`${process.pid} Query Service: CommentModerated ${id}`)
-    console.log(`post id = ${postId}`);
-    console.log(content, status);
-    const post = posts[postId];
-    const comments = post.comments;
-    const commentIndex = comments.findIndex(e => e.id === id);
-    if (status === 406) {
-      posts[postId].comments[commentIndex].status = 406;
-    }
-    else {
-      posts[postId].comments[commentIndex].status = 200;
-    }
+  const students = Store.read();
+  if (type === 'StudentCreated') {
+    const {
+      id,
+      firstName, 
+      lastName,
+      departments,
+      gpa,
+      major_gpa,
+      academic_year,
+      advisor,
+      standing,
+      credits,
+      expected_grad,
+      coursesTaken
+    } = data;
+    console.log(`${process.pid} Query Service: StudentCreated ${id}`)
+    students[id] = {
+      id,
+      firstName, 
+      lastName,
+      gpa,
+      major_gpa,
+      academic_year,
+      advisor,
+      standing,
+      credits,
+      expected_grad,
+      coursesTaken,
+      departments: [],
+      cart: [],
+      enrolled: [],
+    };
   }
 
+  if (type === 'DepartmentCreated') {
+    const {
+      id,
+      title, 
+      track,
+    } = data;
+    console.log(`post id = ${postId}`);
+    const student = students[id];
+    console.log(`${process.pid} Query Service: DepartmentCreated ${id}`);
+    student.departments.push({ id, track, title });
+  }
+  // Cart Updated
+  // if (type === 'DepartmentCreated') {
+  //   const {
+  //     id,
+  //     title, 
+  //     track,
+  //   } = data;
+  //   console.log(`post id = ${postId}`);
+  //   const student = students[id];
+  //   console.log(`${process.pid} Query Service: DepartmentCreated ${id}`);
+  //   student.departments.push({ id, track, title });
+  // }
+  // Enrolled Updated
+  // if (type === 'DepartmentCreated') {
+  //   const {
+  //     id,
+  //     title, 
+  //     track,
+  //   } = data;
+  //   console.log(`post id = ${postId}`);
+  //   const student = students[id];
+  //   console.log(`${process.pid} Query Service: DepartmentCreated ${id}`);
+  //   student.departments.push({ id, track, title });
+  // }
   Store.write(posts);
 
   res.send({ status: 'OK' });
 });
 
-app.listen(4002, () => {
-  console.log('Listening on 4002');
+app.listen(4003, () => {
+  console.log('Query Service Listening on 4003');
 });
