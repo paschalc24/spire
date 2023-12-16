@@ -1,6 +1,7 @@
 <script>
-    import logoIcon from "./logo.svg"
-    import Cart from "./Cart.svelte"
+    import logoIcon from "./logo.svg";
+    import Cart from "./Cart.svelte";
+    import CourseList from "./CourseList.svelte";
     export let studentId;
     
 </script>
@@ -8,7 +9,10 @@
 <nav class="nav align-items-center p-2">
     <img src={logoIcon} alt="Logo Icon" />
     <a class="nav-link active" href="/">{studentId}</a>
-    <Cart studentId={studentId}/>
+    <div class="cart-container">
+        <CourseList studentId={studentId}/>
+        <Cart studentId={studentId}/>
+    </div>
 </nav>
 
 <style>
@@ -24,5 +28,8 @@
     }
     .nav-link:hover {
         opacity: 1;
+    }
+    .cart-container{
+        margin-left: auto;
     }
 </style>
