@@ -9,7 +9,6 @@
     onMount(async () => {
         const studentRes = await fetch(`http://localhost:4004/students/${studentId}`);
         const studentData = await studentRes.json();
-        console.log("ON MOUNT APP", studentData)
         StudentStore.set(studentData);
     });
 
