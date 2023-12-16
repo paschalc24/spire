@@ -24,7 +24,7 @@
   },
   "contributors": [],
   "scripts": {
-    "start": "pm2 start index.js --name event-bus -i 1",
+    "start": "pm2 start index.js --name event-bus -i 3",
     "stop": "pm2 delete event-bus",
     "dev": "nodemon index.js",
     "test": ""

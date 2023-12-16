@@ -1,1 +1,68 @@
-{}
+{
+    "COMPSCI": {
+      "title": "Computer Science",
+      "track": {
+        "0": {
+          "category": "Intro CS Courses",
+          "courseIDs": ["COMPSCI101", "COMPSCI220", "COMPSCI150"]
+        },
+        "1": {
+          "category": "Math Courses",
+          "courseIDs": ["MATH101", "MATH202"]
+        },
+        "2": {
+          "category": "Core CS",
+          "courseIDs": ["COMPSCI301", "COMPSCI310"]
+        },
+        "3": {
+          "category": "Integrative Experience",
+          "courseIDs": ["COMPSCI401"]
+        },
+        "4": {
+          "category": "Junior Writing",
+          "courseIDs": ["ENGL201"]
+        },
+        "5": {
+          "category": "CNS Lab Science",
+          "courseIDs": ["BIOL101", "CHEM201"]
+        },
+        "6": {
+          "category": "Upper Level CS",
+          "courseIDs": ["COMPSCI450", "COMPSCI470"]
+        }
+      }
+    },
+    "MATH": {
+      "title": "Mathematics",
+      "track": {
+        "0": {
+          "category": "Intro Math Courses",
+          "courseIDs": ["MATH101", "MATH105", "MATH110"]
+        },
+        "1": {
+          "category": "Applied Math Courses",
+          "courseIDs": ["MATH210", "MATH215"]
+        },
+        "2": {
+          "category": "Advanced Calculus",
+          "courseIDs": ["MATH301", "MATH302"]
+        },
+        "3": {
+          "category": "Probability and Statistics",
+          "courseIDs": ["MATH340", "MATH341"]
+        },
+        "4": {
+          "category": "Algebra",
+          "courseIDs": ["MATH350", "MATH351"]
+        },
+        "5": {
+          "category": "Mathematical Logic",
+          "courseIDs": ["MATH360"]
+        },
+        "6": {
+          "category": "Senior Seminar",
+          "courseIDs": ["MATH400"]
+        }
+      }
+    }
+  }

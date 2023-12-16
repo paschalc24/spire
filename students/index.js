@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import logger from 'morgan';
-import { randomBytes } from 'crypto';
 import Store from './store.js';
 
 const app = express();
@@ -38,7 +37,7 @@ app.post('/students', async (req, res) => {
     standing,
     credits,
     expected_grad,
-    coursesTaken
+    coursesTaken,
   } = req.body;
 
   const students = Store.read();
@@ -55,7 +54,8 @@ app.post('/students', async (req, res) => {
     standing,
     credits,
     expected_grad,
-    coursesTaken
+    coursesTaken,
+    departments,
   };
   Store.write(students);
 
@@ -76,7 +76,8 @@ app.post('/students', async (req, res) => {
           standing,
           credits,
           expected_grad,
-          coursesTaken
+          coursesTaken,
+          departments,
         },
       }),
     });

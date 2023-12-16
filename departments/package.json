@@ -24,7 +24,7 @@
   },
   "contributors": [],
   "scripts": {
-    "start": "pm2 start index.js --name posts -i 5",
+    "start": "pm2 start index.js --name departments -i 2",
     "stop": "pm2 delete posts",
     "dev": "nodemon index.js",
     "test": ""

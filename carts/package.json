@@ -24,7 +24,7 @@
   },
   "contributors": [],
   "scripts": {
-    "start": "pm2 start index.js --name posts -i 5",
+    "start": "pm2 start index.js --name carts -i 3",
     "stop": "pm2 delete posts",
     "dev": "nodemon index.js",
     "test": ""
@@ -32,7 +32,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

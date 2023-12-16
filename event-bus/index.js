@@ -1,32 +1,45 @@
 import express from 'express';
-import logger from 'morgan';
+import winston from 'winston';
 
 const app = express();
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+      winston.format.timestamp(),
+      winston.format.simple()
+  ),
+  transports: [
+      new winston.transports.Console(),
+      new winston.transports.File({filename: 'app.log'})
+  ]
+});
 
 app.use(logger('dev'));
 app.use(express.json());
 
+
 const portMap = {
-  "Departments_Service": 4000,
-  "Courses_Service": 4001,
+  "Students_Service": 4000,
+  "Query_Service": 4003,
+  "Departments_Service": 4001,
   "Carts_Service": 4002,
-  "Query_Service": 4003
+  "Enrolled_Service": 4003
 }
 
 app.post('/events', async (req, res) => {
   const event = req.body;
-  console.log(`(${process.pid}) Event Bus (Received Event) ${event.type}`);
+  logger.info(`(${process.pid}) Event Bus (Received Event) ${event.type}`);
   for (const port of Object.values(portMap)) {
     try {
-      console.log(
-        `(${process.pid}) Event Bus (Sending Event to ${port}) ${event.type}`
-      );
+      logger.info(`(${process.pid}) Event Bus (Sending Event to ${port}) ${event.type}`);
       await fetch(`http://localhost:${port}/events`, {
         method: 'POST',
         body: JSON.stringify(event),
         headers: { 'Content-Type': 'application/json' },
       });
     } catch (err) {
+      logger.info(`(${process.pid}) Error (Sending Event to ${port}) ${event.type}`);
       console.log(err);
     }
   }

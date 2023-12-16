@@ -24,7 +24,7 @@
   },
   "contributors": [],
   "scripts": {
-    "start": "pm2 start index.js --name query -i 5",
+    "start": "pm2 start index.js --name query -i 3",
     "stop": "pm2 delete query",
     "dev": "nodemon index.js",
     "test": ""
