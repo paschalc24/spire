@@ -24,7 +24,7 @@ app.get('/enrolled/:id', (req, res) => {
   }
 });
 
-app.delete('/enrolled/:id/:courseId', (req, res) => {
+app.delete('/enrolled/:id/:courseId', async (req, res) => {
   console.log(`(${process.pid}) Enrolled Service: DELETE BY ID/cart/${req.params.id}`);
   let enrolled = Store.read();
   const id = req.params.id;
@@ -37,6 +37,26 @@ app.delete('/enrolled/:id/:courseId', (req, res) => {
     enrolled[id] = cart;
     Store.write(enrolled);
     console.log(`(${process.pid}) Enrolled Service: ${JSON.stringify(cart)}`);
+    try {
+      await fetch('http://localhost:4005/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'EnrolledEntryDeleted',
+          data: {
+            id: req.params.id,
+            courseId: req.params.courseId,
+          },
+        }),
+      });
+    }
+    catch (err) {
+      console.log(`(${process.pid}) Enrolled Service: ${err}`);
+      res.status(500).send({
+        status: 'ERROR',
+        message: err,
+    });
+  }
     res.status(200).send(cart);
   }
 });
@@ -49,35 +69,25 @@ app.post('/enrolled/:id/:courseId', async (req, res) => {
   enrolled[req.params.id].push(req.params.courseId);
   Store.write(enrolled);
 
-  // try {
-  //   await fetch('http://localhost:4005/events', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({
-  //       type: 'StudentCreated',
-  //       data: {
-  //         id,
-  //         firstName, 
-  //         lastName,
-  //         departments,
-  //         gpa,
-  //         major_gpa,
-  //         academic_year,
-  //         advisor,
-  //         standing,
-  //         credits,
-  //         specializations,
-  //         expected_grad 
-  //       },
-  //     }),
-  //   });
-  // } catch (err) {
-  //   console.log(`(${process.pid}) Students Service: ${err}`);
-  //   res.status(500).send({
-  //     status: 'ERROR',
-  //     message: err,
-  //   });
-  // }
+  try {
+    await fetch('http://localhost:4005/events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'EnrolledEntryCreated',
+        data: {
+          id: req.params.id,
+          courseId: req.params.courseId
+        },
+      }),
+    });
+  } catch (err) {
+    console.log(`(${process.pid}) Enrolled Service: ${err}`);
+    res.status(500).send({
+      status: 'ERROR',
+      message: err,
+    });
+  }
 
   res.status(201).send(enrolled[req.params.id]);
   console.log(`(${process.pid}) Enrolled Service: ${JSON.stringify(enrolled)}`);
@@ -86,7 +96,14 @@ app.post('/enrolled/:id/:courseId', async (req, res) => {
 app.post('/events', async (req, res) => {
   const event = req.body;
   const type = event.type;
+  
   console.log(`(${process.pid}) Enrolled Service Received Event: ${type}`);
+  if (type === 'StudentCreated') {
+    const enrolled = Store.read();
+    enrolled[event.data.id] = [];
+    Store.write(enrolled);
+  }
+  
   res.send({});
 });
 

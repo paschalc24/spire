@@ -74,6 +74,15 @@ app.post('/events', (req, res) => {
     console.log("CART DATA", data)
     students[id].cart.push(courseId);
   }
+  if (type === 'EnrolledEntryCreated') {
+    const {
+      id, 
+      courseId
+    } = data;
+    console.log("CART DATA", data)
+    students[id].cart = students[id].cart.filter(e => e !== courseId);
+    students[id].enrolled.push(courseId);
+  }
 
   Store.write(students);
 

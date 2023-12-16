@@ -1,8 +1,8 @@
 import fs from 'fs';
 
 const read = () => {
-  if (fs.existsSync('carts.json')) {
-    const carts = fs.readFileSync('carts.json');
+  if (fs.existsSync('enrolled.json')) {
+    const carts = fs.readFileSync('enrolled.json');
     return JSON.parse(carts);
   } else {
     return {};
@@ -10,7 +10,7 @@ const read = () => {
 };
 
 const write = (carts) => {
-  fs.writeFileSync('carts.json', JSON.stringify(carts));
+  fs.writeFileSync('enrolled.json', JSON.stringify(carts));
 };
 
 export default {

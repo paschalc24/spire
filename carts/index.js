@@ -103,6 +103,11 @@ app.post('/events', async (req, res) => {
     carts[event.data.id] = [];
     Store.write(carts);
   }
+  if (type === 'EnrolledEntryCreated') {
+    const carts = Store.read();
+    carts[event.data.id] = carts[event.data.id].filter(e => e !== event.data.courseId);
+    Store.write(carts);
+  }
   
   res.send({});
 });
