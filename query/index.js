@@ -63,15 +63,20 @@ app.post('/events', (req, res) => {
       id,
       courseId
     } = data;
-    console.log("CART DATA", data)
     students[id].cart = students[id].cart.filter( e => e !== courseId);
+  }
+  if (type === 'EnrolledEntryDeleted') {
+    const {
+      id,
+      courseId
+    } = data;
+    students[id].enrolled = students[id].enrolled.filter( e => e !== courseId);
   }
   if (type === 'CartEntryCreated') {
     const {
       id, 
       courseId
     } = data;
-    console.log("CART DATA", data)
     students[id].cart.push(courseId);
   }
   if (type === 'EnrolledEntryCreated') {
@@ -83,6 +88,7 @@ app.post('/events', (req, res) => {
     students[id].cart = students[id].cart.filter(e => e !== courseId);
     students[id].enrolled.push(courseId);
   }
+  
 
   Store.write(students);
 
