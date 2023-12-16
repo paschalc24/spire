@@ -211,3 +211,111 @@ info: (41288) Event Bus (Sending Event to Students_Service) CartEntryCreated {"t
 info: (41288) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:40:47.720Z"}
 info: (41288) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:40:47.725Z"}
 info: (41288) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:40:47.728Z"}
+info: (42376) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T08:45:22.001Z"}
+info: (42376) Event Bus (Sending Event to Query_Service) StudentCreated {"timestamp":"2023-12-16T08:45:22.008Z"}
+info: (42376) Event Bus (Sending Event to Students_Service) StudentCreated {"timestamp":"2023-12-16T08:45:22.154Z"}
+info: (42376) Event Bus (Sending Event to Departments_Service) StudentCreated {"timestamp":"2023-12-16T08:45:22.203Z"}
+info: (42376) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:45:22.303Z"}
+info: (42376) Event Bus (Sending Event to Query_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:45:22.303Z"}
+info: (42376) Event Bus (Sending Event to Students_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:45:22.318Z"}
+info: (42376) Event Bus (Sending Event to Departments_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:45:22.327Z"}
+info: (42376) Event Bus (Sending Event to Carts_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:45:22.357Z"}
+info: (42376) Event Bus (Sending Event to Enrolled_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:45:22.406Z"}
+info: (42376) Event Bus (Sending Event to Carts_Service) StudentCreated {"timestamp":"2023-12-16T08:45:22.469Z"}
+info: (42376) Event Bus (Sending Event to Enrolled_Service) StudentCreated {"timestamp":"2023-12-16T08:45:22.481Z"}
+info: (42376) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:46:18.701Z"}
+info: (42376) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:18.702Z"}
+info: (42376) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:18.710Z"}
+info: (42376) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:18.719Z"}
+info: (42376) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:18.725Z"}
+info: (42376) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:18.732Z"}
+info: (42376) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:46:19.659Z"}
+info: (42376) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:19.660Z"}
+info: (42376) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:19.666Z"}
+info: (42376) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:19.672Z"}
+info: (42376) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:19.677Z"}
+info: (42376) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:19.682Z"}
+info: (42376) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:46:25.721Z"}
+info: (42376) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:25.721Z"}
+info: (42376) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:25.728Z"}
+info: (42376) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:25.734Z"}
+info: (42376) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:25.739Z"}
+info: (42376) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:46:25.744Z"}
+info: (42376) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:51:16.659Z"}
+info: (42376) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:51:16.659Z"}
+info: (42376) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:51:16.688Z"}
+info: (42376) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:51:16.696Z"}
+info: (42376) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:51:16.707Z"}
+info: (42376) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:51:16.738Z"}
+info: (42376) Event Bus (Received Event) CartEntryDeleted {"timestamp":"2023-12-16T08:51:25.138Z"}
+info: (42376) Event Bus (Sending Event to Query_Service) CartEntryDeleted {"timestamp":"2023-12-16T08:51:25.138Z"}
+info: (42376) Event Bus (Sending Event to Students_Service) CartEntryDeleted {"timestamp":"2023-12-16T08:51:25.143Z"}
+info: (42376) Event Bus (Sending Event to Departments_Service) CartEntryDeleted {"timestamp":"2023-12-16T08:51:25.148Z"}
+info: (42376) Event Bus (Sending Event to Carts_Service) CartEntryDeleted {"timestamp":"2023-12-16T08:51:25.159Z"}
+info: (42376) Event Bus (Sending Event to Enrolled_Service) CartEntryDeleted {"timestamp":"2023-12-16T08:51:25.165Z"}
+info: (44874) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T08:56:23.520Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) StudentCreated {"timestamp":"2023-12-16T08:56:23.527Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) StudentCreated {"timestamp":"2023-12-16T08:56:23.689Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) StudentCreated {"timestamp":"2023-12-16T08:56:23.741Z"}
+info: (44874) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:56:23.860Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:56:23.861Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:56:23.871Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:56:23.881Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:56:23.900Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:56:23.939Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) StudentCreated {"timestamp":"2023-12-16T08:56:24.033Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) StudentCreated {"timestamp":"2023-12-16T08:56:24.047Z"}
+info: (44874) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:57:02.088Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:02.089Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:02.100Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:02.106Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:02.115Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:02.122Z"}
+info: (44874) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:57:04.800Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:04.800Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:04.805Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:04.811Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:04.815Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:04.819Z"}
+info: (44874) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:57:15.748Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:15.749Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:15.755Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:15.760Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:15.766Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:57:15.774Z"}
+info: (44874) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T08:59:35.253Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) StudentCreated {"timestamp":"2023-12-16T08:59:35.253Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) StudentCreated {"timestamp":"2023-12-16T08:59:35.286Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) StudentCreated {"timestamp":"2023-12-16T08:59:35.292Z"}
+info: (44874) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:59:35.309Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:59:35.309Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:59:35.316Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:59:35.322Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:59:35.340Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) StudentDepartmentsInitialized {"timestamp":"2023-12-16T08:59:35.396Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) StudentCreated {"timestamp":"2023-12-16T08:59:35.404Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) StudentCreated {"timestamp":"2023-12-16T08:59:35.410Z"}
+info: (44874) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T08:59:46.422Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T08:59:46.422Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T08:59:46.431Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T08:59:46.436Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T08:59:46.441Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T08:59:46.449Z"}
+info: (44874) Event Bus (Received Event) CartEntryCreated {"timestamp":"2023-12-16T09:00:14.965Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) CartEntryCreated {"timestamp":"2023-12-16T09:00:14.965Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) CartEntryCreated {"timestamp":"2023-12-16T09:00:14.971Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) CartEntryCreated {"timestamp":"2023-12-16T09:00:14.979Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) CartEntryCreated {"timestamp":"2023-12-16T09:00:14.990Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) CartEntryCreated {"timestamp":"2023-12-16T09:00:14.998Z"}
+info: (44874) Event Bus (Received Event) CartEntryDeleted {"timestamp":"2023-12-16T09:00:45.288Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:45.288Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:45.294Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:45.299Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:45.303Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:45.308Z"}
+info: (44874) Event Bus (Received Event) CartEntryDeleted {"timestamp":"2023-12-16T09:00:53.836Z"}
+info: (44874) Event Bus (Sending Event to Query_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:53.836Z"}
+info: (44874) Event Bus (Sending Event to Students_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:53.844Z"}
+info: (44874) Event Bus (Sending Event to Departments_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:53.850Z"}
+info: (44874) Event Bus (Sending Event to Carts_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:53.854Z"}
+info: (44874) Event Bus (Sending Event to Enrolled_Service) CartEntryDeleted {"timestamp":"2023-12-16T09:00:53.860Z"}

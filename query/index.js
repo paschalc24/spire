@@ -56,13 +56,25 @@ app.post('/events', (req, res) => {
       student_track,
     } = data;
     console.log(`${process.pid} Query Service: StudentDepartmentsInitialized ${id}`)
-    console.log("STUDENTS", students)
-    console.log("STUDENT", students[id])
-    console.log("STUDENT ID TRACK BEFORE INIT", students[id].track)
     students[id].track = student_track;
-    console.log("STUDENTS UPDATED", students)
   }
-  console.log("WRITING STUDENTS", students);
+  if (type === 'CartEntryDeleted') {
+    const {
+      id,
+      courseId
+    } = data;
+    console.log("CART DATA", data)
+    students[id].cart = students[id].cart.filter( e => e !== courseId);
+  }
+  if (type === 'CartEntryCreated') {
+    const {
+      id, 
+      courseId
+    } = data;
+    console.log("CART DATA", data)
+    students[id].cart.push(courseId);
+  }
+
   Store.write(students);
 
   res.send({ status: 'OK' });

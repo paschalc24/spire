@@ -24,7 +24,7 @@ app.get('/carts/:id', (req, res) => {
   }
 });
 
-app.delete('/carts/:id/:courseId', (req, res) => {
+app.delete('/carts/:id/:courseId', async (req, res) => {
   console.log(`(${process.pid}) Carts Service: DELETE BY ID/cart/${req.params.id}`);
   let carts = Store.read();
   const id = req.params.id;
@@ -37,6 +37,26 @@ app.delete('/carts/:id/:courseId', (req, res) => {
     carts[id] = cart;
     Store.write(carts);
     console.log(`(${process.pid}) Carts Service: ${JSON.stringify(cart)}`);
+    try {
+      await fetch('http://localhost:4005/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'CartEntryDeleted',
+          data: {
+            id: req.params.id,
+            courseId: req.params.courseId,
+          },
+        }),
+      });
+    }
+    catch (err) {
+      console.log(`(${process.pid}) Carts Service: ${err}`);
+      res.status(500).send({
+        status: 'ERROR',
+        message: err,
+    });
+  }
     res.status(200).send(cart);
   }
 });
@@ -56,6 +76,7 @@ app.post('/carts/:id/:courseId', async (req, res) => {
       body: JSON.stringify({
         type: 'CartEntryCreated',
         data: {
+          id: req.params.id,
           courseId: req.params.courseId
         },
       }),

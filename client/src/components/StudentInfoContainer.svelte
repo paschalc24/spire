@@ -7,9 +7,15 @@
     let student = {};
 
     onMount(async () => {
-        const studentRes = await fetch(`http://localhost:4004/students/${studentId}`);
+        try {
+            const studentRes = await fetch(`http://localhost:4004/students/${studentId}`);
         const studentData = await studentRes.json();
         StudentStore.set(studentData);
+        }
+        catch (err) {
+            console.error(err);
+            alert("Unable to fetch student data")
+        }
     });
 
     StudentStore.subscribe(async (_student) => {
