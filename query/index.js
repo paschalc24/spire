@@ -7,9 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/students', (req, res) => {
+app.get('/students/:id', (req, res) => {
   const students = Store.read();
-  res.send(students);
+  res.send(students[req.params.id]);
 });
 
 app.post('/events', (req, res) => {
