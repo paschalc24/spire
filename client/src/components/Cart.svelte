@@ -31,7 +31,7 @@
                 method: "POST",
             });
             StudentStore.update((student) => {
-                student.enrolled = student.enrolled.push(course);
+                student.enrolled.push(course);
                 student.cart = student.cart.filter(e => e !== course);
                 return student;
             })
