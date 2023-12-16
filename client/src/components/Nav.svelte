@@ -26,6 +26,22 @@
             alert("Unable to delete");
         }
     }
+    async function handleEnroll(course) {
+        try {
+            await fetch(`http://localhost:4003/enrolled/${studentId}/${course}`, {
+                method: "POST",
+            });
+            StudentStore.update((student) => {
+                student.enrolled = student.enrolled.push(course);
+                student.cart = student.cart.filter(e => e !== course);
+                return student;
+            })
+        }
+        catch (err) {
+            console.error(err);
+            alert("Unable to enroll");
+        }
+    }
 </script>
 
 <nav class="nav align-items-center p-2">
@@ -46,7 +62,7 @@
                 <div class="cart-item-container mb-2 d-flex">
                     <li class="cart-item">{course}</li>
                     <button on:click={() => handleDelete(course)} class="btn btn-dark">Remove</button>
-                    <button class="btn btn-success">Enroll</button>
+                    <button on:click={() => handleEnroll(course)} class="btn btn-success">Enroll</button>
                 </div>
             {/each}
     </Modal>
