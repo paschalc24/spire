@@ -30,9 +30,9 @@ const portMap = {
 app.post('/events', async (req, res) => {
   const event = req.body;
   logger.info(`(${process.pid}) Event Bus (Received Event) ${event.type}`);
-  for (const port of Object.values(portMap)) {
+  for (const [service, port] of Object.entries(portMap)) {
     try {
-      logger.info(`(${process.pid}) Event Bus (Sending Event to ${port}) ${event.type}`);
+      logger.info(`(${process.pid}) Event Bus (Sending Event to ${service}) ${event.type}`);
       await fetch(`http://localhost:${port}/events`, {
         method: 'POST',
         body: JSON.stringify(event),

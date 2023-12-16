@@ -8,9 +8,7 @@
     let cart = [];
 
     StudentStore.subscribe((_student) => {
-        if (_student?.cart?.length > 0) {
-            cart = _student.cart
-        }
+        cart = _student?.cart || [];
     });
     
     async function handleDelete(course) {
@@ -19,7 +17,7 @@
                 method: "DELETE",
             });
             StudentStore.update((student) => {
-                student[studentId].cart = student[studentId].cart.filter(e !== course);
+                student.cart = student.cart.filter(e => e !== course);
                 return student;
             })
         }

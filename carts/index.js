@@ -49,35 +49,24 @@ app.post('/carts/:id/:courseId', async (req, res) => {
   carts[req.params.id].push(req.params.courseId);
   Store.write(carts);
 
-  // try {
-  //   await fetch('http://localhost:4005/events', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({
-  //       type: 'StudentCreated',
-  //       data: {
-  //         id,
-  //         firstName, 
-  //         lastName,
-  //         departments,
-  //         gpa,
-  //         major_gpa,
-  //         academic_year,
-  //         advisor,
-  //         standing,
-  //         credits,
-  //         specializations,
-  //         expected_grad 
-  //       },
-  //     }),
-  //   });
-  // } catch (err) {
-  //   console.log(`(${process.pid}) Students Service: ${err}`);
-  //   res.status(500).send({
-  //     status: 'ERROR',
-  //     message: err,
-  //   });
-  // }
+  try {
+    await fetch('http://localhost:4005/events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'CartEntryCreated',
+        data: {
+          courseId: req.params.courseId
+        },
+      }),
+    });
+  } catch (err) {
+    console.log(`(${process.pid}) Carts Service: ${err}`);
+    res.status(500).send({
+      status: 'ERROR',
+      message: err,
+    });
+  }
 
   res.status(201).send(carts[req.params.id]);
   console.log(`(${process.pid}) Carts Service: ${JSON.stringify(carts)}`);
@@ -86,7 +75,14 @@ app.post('/carts/:id/:courseId', async (req, res) => {
 app.post('/events', async (req, res) => {
   const event = req.body;
   const type = event.type;
+  
   console.log(`(${process.pid}) Carts Service Received Event: ${type}`);
+  if (type === 'StudentCreated') {
+    const carts = Store.read();
+    carts[event.data.id] = [];
+    Store.write(carts);
+  }
+  
   res.send({});
 });
 

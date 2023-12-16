@@ -1,20 +1,20 @@
 <script>
     import Modal from "./Modal.svelte";
     import check from "../../src/check.png";
-    import { CartStore } from "../routes/stores.js";
+    import { StudentStore } from "../routes/stores.js";
     export let title;
     export let courseIDs;
+    export let studentId;
     let showModal = false;
 
     async function handlePost(course) {
-        //need to provistion with student id.
         try {
-            await fetch(`http://localhost:4002/carts/32417468/${course}`, {
+            await fetch(`http://localhost:4002/carts/${studentId}/${course}`, {
                 method: "POST",
             });
-            CartStore.update((cart) => {
-                cart.push(course);
-                return cart;
+            StudentStore.update((student) => {
+                student.cart.push(course);
+                return student;
             })
         }
         catch (err) {

@@ -26,25 +26,25 @@
 </script>
 
 {#if student?.departments?.length > 0}
-<div class="container-fluid">
-  <select class="h2 department-select" id="department-select" bind:value={selectedDepartmentId} on:change={onSelectDepartmentChange}>
-    {#each student.departments as departmentId (departmentId)}
-      <option value={departmentId}>{departmentId}</option>
-    {/each}
-  </select>
-</div>
+  <div class="container-fluid">
+    <select class="department-select h2" id="department-select" bind:value={selectedDepartmentId} on:change={onSelectDepartmentChange}>
+      {#each student.departments as departmentId (departmentId)}
+        <option value={departmentId}>{departmentId}</option>
+      {/each}
+    </select>
+  </div>
 {/if}
 
 {#if Object.keys(selectedDepartment).length > 0}
-<div class="container-fluid">
-  <!-- Display track information for the selected department -->
-  {#each Object.entries(selectedDepartment?.track ?? {}) as [categoryId, category], index}
-    <StageButton title={category.category} courseIDs={category.courseIDs} />
-    {#if index < Object.keys(selectedDepartment.track).length - 1}
-    <center>↓</center>
-    {/if}
-  {/each}
-</div>
+  <div class="container-fluid">
+    <!-- Display track information for the selected department -->
+    {#each Object.entries(selectedDepartment?.track ?? {}) as [categoryId, category], index}
+      <StageButton studentId={student.id} title={category.category} courseIDs={category.courseIDs} />
+      {#if index < Object.keys(selectedDepartment.track).length - 1}
+      <center>↓</center>
+      {/if}
+    {/each}
+  </div>
 {/if}
 
 <style>
