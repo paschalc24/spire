@@ -54,34 +54,34 @@ app.post('/events', async (req, res) => {
   console.log(`(${process.pid}) Departments Service Received Event: ${type}`);
   if (type === 'StudentCreated') {
     console.log('ALL GOOD')
-    // const departments = Store.read();
-    // let student_track = {};
-    // console.log("HERE SUCCESS", departments)
-    // console.log("EVENT DEPS", event.data.departments, typeof(event.data.departments));
-    // for (let department of event.data.departments) {
-    //   student_track[department] = departments[department];
-    // }
-    // console.log("TRACK CREATED", student_track)
-    // for (const department of event.data.departments) {
-    //   student_track[department] = departments[department];
-    // }
-    // console.log("TRACK CREATED", student_track)
-    // try {
-    //   await fetch('http://localhost:4005/events', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({
-    //       type: 'StudentDepartmentsInitialized',
-    //       data: {id:event.data.id, student_track},
-    //     }),
-    //   });
-    // } catch (err) {
-    //   console.log(`(${process.pid}) Students Service: ${err}`);
-    //   res.status(500).send({
-    //     status: 'ERROR',
-    //     message: err,
-    //   });
-    // }
+    const departments = Store.read();
+    let student_track = {};
+    console.log("HERE SUCCESS", departments)
+    console.log("EVENT DEPS", event.data.departments, typeof(event.data.departments));
+    for (let department of event.data.departments) {
+      student_track[department] = departments[department];
+    }
+    console.log("TRACK CREATED", student_track)
+    for (const department of event.data.departments) {
+      student_track[department] = departments[department];
+    }
+    console.log("TRACK CREATED", student_track)
+    try {
+      await fetch('http://localhost:4005/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'StudentDepartmentsInitialized',
+          data: {id:event.data.id, student_track},
+        }),
+      });
+    } catch (err) {
+      console.log(`(${process.pid}) Students Service: ${err}`);
+      res.status(500).send({
+        status: 'ERROR',
+        message: err,
+      });
+    }
   }
   res.send({});
 });

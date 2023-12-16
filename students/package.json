@@ -23,10 +23,13 @@
     "url": ""
   },
   "contributors": [],
+  "nodemonConfig": {
+    "ignore": ["*.json"]
+  },
   "scripts": {
     "start": "pm2 start index.js --name students -i 2",
     "stop": "pm2 delete posts",
-    "dev": "nodemon index.js",
+    "dev": "npx nodemon index.js",
     "test": ""
   },
   "dependencies": {

@@ -9,7 +9,7 @@
     async function handlePost(course) {
         //need to provistion with student id.
         try {
-            await fetch(`http://localhost:4003/carts/32417468/${course}`, {
+            await fetch(`http://localhost:4002/carts/32417468/${course}`, {
                 method: "POST",
             });
             CartStore.update((cart) => {

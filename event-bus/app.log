@@ -1,0 +1,80 @@
+info: (24024) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T05:45:53.442Z"}
+info: (24024) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T05:45:53.445Z"}
+info: (24024) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T05:45:53.531Z"}
+info: (24024) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T05:46:54.328Z"}
+info: (24024) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T05:46:54.329Z"}
+info: (24024) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T05:46:54.343Z"}
+info: (24847) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T05:49:08.653Z"}
+info: (24847) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T05:49:08.658Z"}
+info: (24847) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T05:49:08.717Z"}
+info: (25132) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T05:51:37.711Z"}
+info: (25132) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T05:51:37.715Z"}
+info: (25132) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T05:51:37.784Z"}
+info: (25132) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T05:51:48.284Z"}
+info: (25132) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T05:51:48.286Z"}
+info: (25132) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T05:51:48.297Z"}
+info: (25132) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T05:51:55.026Z"}
+info: (25132) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T05:51:55.026Z"}
+info: (25132) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T05:51:55.031Z"}
+info: (25640) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T05:56:48.373Z"}
+info: (25640) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T05:56:48.388Z"}
+info: (25640) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T05:56:48.569Z"}
+info: (25640) Event Bus (Sending Event to 4001) StudentCreated {"timestamp":"2023-12-16T05:56:48.783Z"}
+info: (25640) Error (Sending Event to 4001) StudentCreated {"timestamp":"2023-12-16T05:56:48.802Z"}
+info: (27501) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:10:47.042Z"}
+info: (27501) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:10:47.049Z"}
+info: (27501) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:10:47.146Z"}
+info: (27501) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:10:54.618Z"}
+info: (27501) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:10:54.619Z"}
+info: (27501) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:10:54.631Z"}
+info: (27795) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:13:01.632Z"}
+info: (27795) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:13:01.636Z"}
+info: (27795) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:13:01.769Z"}
+info: (28076) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:13:52.203Z"}
+info: (28076) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:13:52.207Z"}
+info: (28076) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:13:52.259Z"}
+info: (28076) Event Bus (Sending Event to 4001) StudentCreated {"timestamp":"2023-12-16T06:13:52.274Z"}
+info: (28076) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:13:52.416Z"}
+info: (28076) Event Bus (Sending Event to 4000) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:13:52.417Z"}
+info: (28076) Event Bus (Sending Event to 4003) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:13:52.428Z"}
+info: (28076) Event Bus (Sending Event to 4001) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:13:52.454Z"}
+info: (28076) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:16:27.542Z"}
+info: (28076) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:16:27.543Z"}
+info: (28076) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:16:27.555Z"}
+info: (28076) Event Bus (Sending Event to 4001) StudentCreated {"timestamp":"2023-12-16T06:16:27.598Z"}
+info: (28076) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:16:27.624Z"}
+info: (28076) Event Bus (Sending Event to 4000) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:16:27.625Z"}
+info: (28076) Event Bus (Sending Event to 4003) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:16:27.632Z"}
+info: (28076) Event Bus (Sending Event to 4001) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:16:27.646Z"}
+info: (28076) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:17:19.459Z"}
+info: (28076) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:17:19.459Z"}
+info: (28076) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:17:19.470Z"}
+info: (28076) Event Bus (Sending Event to 4001) StudentCreated {"timestamp":"2023-12-16T06:17:19.515Z"}
+info: (28076) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:17:19.536Z"}
+info: (28076) Event Bus (Sending Event to 4000) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:17:19.536Z"}
+info: (28076) Event Bus (Sending Event to 4003) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:17:19.543Z"}
+info: (28076) Event Bus (Sending Event to 4001) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:17:19.558Z"}
+info: (29601) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:22:54.042Z"}
+info: (29601) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:22:54.049Z"}
+info: (29601) Event Bus (Sending Event to 4001) StudentCreated {"timestamp":"2023-12-16T06:22:54.172Z"}
+info: (29601) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:22:54.242Z"}
+info: (29601) Event Bus (Sending Event to 4000) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:22:54.252Z"}
+info: (29601) Event Bus (Sending Event to 4001) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:22:54.263Z"}
+info: (29601) Event Bus (Sending Event to 4002) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:22:54.285Z"}
+info: (29601) Event Bus (Sending Event to 4003) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:22:54.366Z"}
+info: (29601) Event Bus (Sending Event to 4004) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:22:54.406Z"}
+info: (29601) Event Bus (Sending Event to 4002) StudentCreated {"timestamp":"2023-12-16T06:22:54.445Z"}
+info: (29601) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:22:54.452Z"}
+info: (29601) Event Bus (Sending Event to 4004) StudentCreated {"timestamp":"2023-12-16T06:22:54.457Z"}
+info: (30052) Event Bus (Received Event) StudentCreated {"timestamp":"2023-12-16T06:24:08.603Z"}
+info: (30052) Event Bus (Sending Event to 4004) StudentCreated {"timestamp":"2023-12-16T06:24:08.608Z"}
+info: (30052) Event Bus (Sending Event to 4000) StudentCreated {"timestamp":"2023-12-16T06:24:08.660Z"}
+info: (30052) Event Bus (Sending Event to 4001) StudentCreated {"timestamp":"2023-12-16T06:24:08.672Z"}
+info: (30052) Event Bus (Received Event) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:24:08.734Z"}
+info: (30052) Event Bus (Sending Event to 4004) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:24:08.734Z"}
+info: (30052) Event Bus (Sending Event to 4000) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:24:08.752Z"}
+info: (30052) Event Bus (Sending Event to 4001) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:24:08.763Z"}
+info: (30052) Event Bus (Sending Event to 4002) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:24:08.778Z"}
+info: (30052) Event Bus (Sending Event to 4003) StudentDepartmentsInitialized {"timestamp":"2023-12-16T06:24:08.797Z"}
+info: (30052) Event Bus (Sending Event to 4002) StudentCreated {"timestamp":"2023-12-16T06:24:08.820Z"}
+info: (30052) Event Bus (Sending Event to 4003) StudentCreated {"timestamp":"2023-12-16T06:24:08.834Z"}

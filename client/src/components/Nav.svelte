@@ -7,7 +7,7 @@
     let cart = [];
 
     onMount(async () => {
-        const cartRes = await fetch(`http://localhost:4003/carts/${studentId}`);
+        const cartRes = await fetch(`http://localhost:4002/carts/${studentId}`);
         const cartData = await cartRes.json();
         console.log("ON MOUNT CART", cartData);
         CartStore.set(cartData);
@@ -20,7 +20,7 @@
     
     async function handleDelete(course) {
         try {
-            await fetch(`http://localhost:4003/carts/${studentId}/${course}`, {
+            await fetch(`http://localhost:4002/carts/${studentId}/${course}`, {
                 method: "DELETE",
             });
             CartStore.update((cart) => {

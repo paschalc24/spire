@@ -15,16 +15,16 @@ const logger = winston.createLogger({
   ]
 });
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(express.json());
 
 
 const portMap = {
+  "Query_Service": 4004,
   "Students_Service": 4000,
-  "Query_Service": 4003,
   "Departments_Service": 4001,
   "Carts_Service": 4002,
-  "Enrolled_Service": 4003
+  "Enrolled_Service": 4003,
 }
 
 app.post('/events', async (req, res) => {

@@ -51,7 +51,6 @@ app.post('/events', (req, res) => {
     };
   }
   if (type === 'StudentDepartmentsInitialized') {
-    const students = Store.read();
     const {
       id,
       student_track,
@@ -59,38 +58,16 @@ app.post('/events', (req, res) => {
     console.log(`${process.pid} Query Service: StudentDepartmentsInitialized ${id}`)
     console.log("STUDENTS", students)
     console.log("STUDENT", students[id])
+    console.log("STUDENT ID TRACK BEFORE INIT", students[id].track)
     students[id].track = student_track;
     console.log("STUDENTS UPDATED", students)
   }
-  // Cart Updated
-  // if (type === 'DepartmentCreated') {
-  //   const {
-  //     id,
-  //     title, 
-  //     track,
-  //   } = data;
-  //   console.log(`post id = ${postId}`);
-  //   const student = students[id];
-  //   console.log(`${process.pid} Query Service: DepartmentCreated ${id}`);
-  //   student.departments.push({ id, track, title });
-  // }
-  // Enrolled Updated
-  // if (type === 'DepartmentCreated') {
-  //   const {
-  //     id,
-  //     title, 
-  //     track,
-  //   } = data;
-  //   console.log(`post id = ${postId}`);
-  //   const student = students[id];
-  //   console.log(`${process.pid} Query Service: DepartmentCreated ${id}`);
-  //   student.departments.push({ id, track, title });
-  // }
+  console.log("WRITING STUDENTS", students);
   Store.write(students);
 
   res.send({ status: 'OK' });
 });
 
-app.listen(4003, () => {
-  console.log('Query Service Listening on 4003');
+app.listen(4004, () => {
+  console.log('Query Service Listening on 4004');
 });

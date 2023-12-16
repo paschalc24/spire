@@ -23,10 +23,13 @@
     "url": ""
   },
   "contributors": [],
+  "nodemonConfig": {
+    "ignore": ["*.json"]
+  },
   "scripts": {
     "start": "pm2 start index.js --name query -i 3",
     "stop": "pm2 delete query",
-    "dev": "nodemon index.js",
+    "dev": "npx nodemon --watch index.js",
     "test": ""
   },
   "dependencies": {

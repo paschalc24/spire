@@ -1,22 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-// import logger from 'morgan';
+import logger from 'morgan';
 import Store from './store.js';
-import winston from 'winston';
 
 const app = express();
-
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.combine(
-      winston.format.timestamp(),
-      winston.format.simple()
-  ),
-  transports: [
-      new winston.transports.Console(),
-      new winston.transports.File({filename: 'app.log'})
-  ]
-});
 
 app.use(logger('dev'));
 app.use(cors());

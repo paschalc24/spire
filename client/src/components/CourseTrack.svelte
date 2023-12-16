@@ -4,11 +4,11 @@
   import { DepartmentStore } from "../routes/stores.js";
 
   let departments = {};
-  let selectedDepartmentId; // Store the ID of the selected department
+  let selectedDepartmentId; 
 
-  $: selectedDepartment = departments[selectedDepartmentId]; // Store the details of the selected department
+  $: selectedDepartment = departments[selectedDepartmentId]; 
 
-  // Fetch departments when student data is available
+  
   $: if (student && Array.isArray(student.departments)) {
     fetchDepartments(student.departments);
   }
@@ -26,7 +26,7 @@
     selectedDepartmentId = departmentIds[0];
   }
   
-  // Listener for DepartmentStore changes
+
   DepartmentStore.subscribe((_departments) => {
     departments = _departments;
     // Reactively update the selected department
@@ -35,25 +35,23 @@
     }
   });
 
-  // Handle department selection change
+  // Handle department change
   function onSelectDepartmentChange(event) {
     selectedDepartmentId = event.target.value;
   }
 </script>
 
-<!-- Selection dropdown for departments -->
 {#if Object.keys(departments).length > 0}
   <div class="container-fluid">
     <label for="department-select" class="degree-header"></label>
     <select class="department-select h2 border-0 font-weight-light" id="department-select" bind:value={selectedDepartmentId} on:change={onSelectDepartmentChange}>
-      {#each Object.keys(departments) as departmentId (departmentId)} <!-- Add the (departmentId) key here to help Svelte track items -->
+      {#each Object.keys(departments) as departmentId (departmentId)} 
         <option value={departmentId}>{departments[departmentId].title}</option>
       {/each}
     </select>
   </div>
 {/if}
 
-<!-- Render the selected department's course track -->
 {#if selectedDepartment}
   <div class="container-fluid">
     <div class="container-fluid p-5">

@@ -29,7 +29,6 @@ app.post('/students', async (req, res) => {
     id,
     firstName, 
     lastName,
-    departments,
     gpa,
     major_gpa,
     academic_year,
@@ -38,6 +37,7 @@ app.post('/students', async (req, res) => {
     credits,
     expected_grad,
     coursesTaken,
+    departments,
   } = req.body;
 
   const students = Store.read();
