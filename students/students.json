@@ -1,0 +1,13 @@
+{"32417468":
+{"id":32417468,
+"firstName":"John",
+"lastName":"Doe",
+"departments":["COMPSCI", "MATH"],
+"gpa":3.75,
+"major_gpa":3.9,
+"academic_year":"Senior",
+"advisor":"Dr. Smith",
+"standing":"Good Standing",
+"credits":120,
+"expected_grad":"2023-05-15",
+"coursesTaken":["COMPSCI_121"]}}
