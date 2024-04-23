@@ -27,7 +27,7 @@
     "ignore": ["*.json"]
   },
   "scripts": {
-    "start": "pm2 start index.js --name event-bus -i 3",
+    "start": "pm2 start index.js --name event-bus -i 1",
     "stop": "pm2 delete event-bus",
     "dev": "npx nodemon --watch index.js",
     "test": ""

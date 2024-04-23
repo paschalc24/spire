@@ -27,7 +27,7 @@
     "ignore": ["*.json"]
   },
   "scripts": {
-    "start": "pm2 start index.js --name carts -i 3",
+    "start": "pm2 start index.js --name carts -i 1",
     "stop": "pm2 delete posts",
     "dev": "nodemon --watch index.js",
     "test": ""

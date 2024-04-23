@@ -27,7 +27,7 @@
     "ignore": ["*.json"]
   },
   "scripts": {
-    "start": "pm2 start index.js --name students -i 2",
+    "start": "pm2 start index.js --name students -i 1",
     "stop": "pm2 delete posts",
     "dev": "npx nodemon index.js",
     "test": ""
